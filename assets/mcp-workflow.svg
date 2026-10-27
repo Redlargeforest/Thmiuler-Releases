@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="460" viewBox="0 0 1440 460" role="img" aria-labelledby="title desc">
+<title id="title">Thmiuler MCP engineering workflow</title>
+<desc id="desc">An AI client uses local MCP tools to inspect real components, validate a model draft, run simulations, analyze results and deliver a runtime panel.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#151a20"/><stop offset="1" stop-color="#28323b"/></linearGradient></defs>
+<rect width="1440" height="460" rx="24" fill="url(#bg)"/>
+<g fill="none" stroke="#bda888" stroke-width="2" opacity=".2"><path d="M0 340H1440M0 380H1440M0 420H1440"/><path d="M160 320v140m280-140v140m280-140v140m280-140v140m280-140v140"/></g>
+<text x="52" y="68" fill="#cbb897" font-family="Segoe UI,Arial,sans-serif" font-size="19" letter-spacing="3">THMIULER / MODEL CONTEXT PROTOCOL</text>
+<text x="52" y="125" fill="#f7f4ed" font-family="Segoe UI,Arial,sans-serif" font-size="38" font-weight="600">From an engineering question to a runnable model</text>
+<text x="52" y="164" fill="#bcc4ca" font-family="Segoe UI,Arial,sans-serif" font-size="20">Local tools. Actual component interfaces. Reviewable operations. Recorded results.</text>
+<g font-family="Segoe UI,Arial,sans-serif">
+<g transform="translate(52 212)"><rect width="244" height="132" rx="12" fill="#303a43" stroke="#57616a"/><text x="20" y="34" fill="#cbb897" font-size="16">01 / DISCOVER</text><text x="20" y="70" fill="#f7f4ed" font-size="25">Real components</text><text x="20" y="103" fill="#c2cbd1" font-size="16">Ports, units, parameters</text></g>
+<g transform="translate(325 212)"><rect width="244" height="132" rx="12" fill="#303a43" stroke="#57616a"/><text x="20" y="34" fill="#cbb897" font-size="16">02 / CHECK</text><text x="20" y="70" fill="#f7f4ed" font-size="25">Model draft</text><text x="20" y="103" fill="#c2cbd1" font-size="16">Validate, stage, review</text></g>
+<g transform="translate(598 212)"><rect width="244" height="132" rx="12" fill="#303a43" stroke="#57616a"/><text x="20" y="34" fill="#cbb897" font-size="16">03 / SIMULATE</text><text x="20" y="70" fill="#f7f4ed" font-size="25">Actual solver run</text><text x="20" y="103" fill="#c2cbd1" font-size="16">Diagnostics and time series</text></g>
+<g transform="translate(871 212)"><rect width="244" height="132" rx="12" fill="#303a43" stroke="#57616a"/><text x="20" y="34" fill="#cbb897" font-size="16">04 / EXPLAIN</text><text x="20" y="70" fill="#f7f4ed" font-size="25">Result analysis</text><text x="20" y="103" fill="#c2cbd1" font-size="16">Curves, metrics, comparisons</text></g>
+<g transform="translate(1144 212)"><rect width="244" height="132" rx="12" fill="#cbb897"/><text x="20" y="34" fill="#303238" font-size="16">05 / DELIVER</text><text x="20" y="70" fill="#161b21" font-size="25">Runtime panel</text><text x="20" y="103" fill="#303238" font-size="16">Preview and Windows export</text></g>
+<g fill="#cbb897" font-size="24"><text x="302" y="287">›</text><text x="575" y="287">›</text><text x="848" y="287">›</text><text x="1121" y="287">›</text></g>
+<text x="52" y="403" fill="#e7e1d5" font-size="19">AI client → local stdio MCP → Thmiuler desktop</text><text x="1121" y="403" fill="#cbb897" font-size="19">thmiuler.com.cn</text>
+</g></svg>

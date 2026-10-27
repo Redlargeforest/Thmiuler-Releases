@@ -1,0 +1,21 @@
+# Public repository allowlist: documentation and small setup helpers only.
+/*
+!/.gitignore
+!/README.md
+!/NOTICE.md
+!/docs/
+/docs/*
+!/docs/INSTALLATION.md
+!/docs/MCP_QUICKSTART.md
+!/examples/
+/examples/*
+!/examples/mcp-client.json
+!/tools/
+/tools/*
+!/tools/JoinInstaller.ps1
+!/assets/
+/assets/*
+!/assets/mcp-workflow.svg
+!/checksums/
+/checksums/*
+!/checksums/2026.10.27.txt
