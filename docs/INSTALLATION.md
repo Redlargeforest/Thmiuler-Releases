@@ -12,7 +12,7 @@ Use the named assets under [the latest release](https://github.com/Redlargefores
 | `Thmiuler-1.bin.part02` | 1,688,555,776 |
 | `Thmiuler.exe` | 11,444,160 |
 | `Thmiuler-2.bin` | 1,192,823,032 |
-| `JoinInstaller.ps1` | 3,499 |
+| `JoinInstaller.ps1` | 3,777 |
 | `SHA256SUMS.txt` | Small text checksum list |
 
 Allow at least 9 GB of free space for the downloads and reconstructed installer data, plus additional space for the installed application. Setup will report its installation space requirements.

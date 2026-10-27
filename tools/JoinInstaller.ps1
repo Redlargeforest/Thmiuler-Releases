@@ -40,6 +40,14 @@ $releaseManifest = @'
 }
 '@ | ConvertFrom-Json
 
+function Get-ReleaseSha256([string]$FilePath) {
+    $hashStream = [System.IO.File]::OpenRead($FilePath)
+    $hashAlgorithm = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        return ([System.BitConverter]::ToString($hashAlgorithm.ComputeHash($hashStream))).Replace('-', '').ToLowerInvariant()
+    } finally { $hashAlgorithm.Dispose(); $hashStream.Dispose() }
+}
+
 function Assert-ReleaseFile([string]$Name, $Spec) {
     $filePath = Join-Path $PSScriptRoot $Name
     if (-not (Test-Path -LiteralPath $filePath -PathType Leaf)) {
@@ -48,7 +56,7 @@ function Assert-ReleaseFile([string]$Name, $Spec) {
     if ((Get-Item -LiteralPath $filePath).Length -ne [long]$Spec.size) {
         throw "Wrong size: $Name. Download the file again."
     }
-    if ((Get-FileHash -LiteralPath $filePath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Spec.sha256) {
+    if ((Get-ReleaseSha256 $filePath) -ne $Spec.sha256) {
         throw "SHA-256 mismatch: $Name. Do not run the installer."
     }
     Write-Host "Verified $Name"
@@ -74,7 +82,7 @@ try {
     } finally { $outputStream.Dispose() }
     $expected = $releaseManifest.originals.'Thmiuler-1.bin'
     if ((Get-Item -LiteralPath $tempPath).Length -ne [long]$expected.size -or
-        (Get-FileHash -LiteralPath $tempPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expected.sha256) {
+        (Get-ReleaseSha256 $tempPath) -ne $expected.sha256) {
         throw 'Reassembled BIN failed verification. Do not run the installer.'
     }
     Move-Item -LiteralPath $tempPath -Destination $outputPath
